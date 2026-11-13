@@ -33,7 +33,7 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(
-    `mongodb+srv://mintahsylvesterkojo_db_user:${DATABASE_PASSWORD}@cluster0.iizgrts.mongodb.net/`,
+    `mongodb://mintahsylvesterkojo_db_user:${DATABASE_PASSWORD}@ac-wbaviyq-shard-00-00.iizgrts.mongodb.net:27017,ac-wbaviyq-shard-00-01.iizgrts.mongodb.net:27017,ac-wbaviyq-shard-00-02.iizgrts.mongodb.net:27017/?ssl=true&replicaSet=atlas-rdmhnb-shard-0&authSource=admin`,
   )
   .then(() => {
     console.log('MongoDB connected');
