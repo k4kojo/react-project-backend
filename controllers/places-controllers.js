@@ -116,7 +116,7 @@ const updatePlace = async (req, res, next) => {
 
   if (!errors.isEmpty()) {
     console.log(errors);
-    throw new HttpError('These fields cannot be empty', 422);
+    return next(new HttpError('These fields cannot be empty', 422));
   }
 
   const { title, description } = req.body;
