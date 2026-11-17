@@ -1,3 +1,5 @@
+const path = require('path');
+
 const { validationResult } = require('express-validator');
 const mongoose = require('mongoose');
 
@@ -83,8 +85,7 @@ const createPlace = async (req, res, next) => {
     description,
     location: coordinates,
     address,
-    image:
-      'https://images.unsplash.com/photo-1577462281852-279bf4986f7b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
+    image: req.file.path,
     creator,
   });
 
@@ -108,8 +109,6 @@ const createPlace = async (req, res, next) => {
     console.error(err);
     return next(error);
   }
-
-  console.log(user);
 
   try {
     const session = await mongoose.startSession();
