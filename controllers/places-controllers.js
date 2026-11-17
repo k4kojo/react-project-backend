@@ -83,7 +83,8 @@ const createPlace = async (req, res, next) => {
     description,
     location: coordinates,
     address,
-    image: 'https://unsplash.com/photos/gray-high-rise-building-WQwtk_t4oJI',
+    image:
+      'https://images.unsplash.com/photo-1577462281852-279bf4986f7b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
     creator,
   });
 

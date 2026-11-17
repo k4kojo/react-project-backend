@@ -45,7 +45,7 @@ const signup = async (req, res, next) => {
     name,
     email,
     image:
-      'https://unsplash.com/photos/man-in-stylish-outfit-with-sunglasses-and-jewelry-RuosmzCKGjY',
+      'https://images.unsplash.com/photo-1518882570151-157128e78fa1?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
     password,
     places: [],
   });
@@ -77,7 +77,10 @@ const login = async (req, res, next) => {
     return next(error);
   }
 
-  res.json({ message: 'Logged in succesfully' });
+  res.json({
+    message: 'Logged in succesfully',
+    user: existingUser.toObject({ getters: true }),
+  });
 };
 
 exports.getUsers = getUsers;
