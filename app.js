@@ -53,7 +53,7 @@ mongoose
     `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@ac-wbaviyq-shard-00-00.iizgrts.mongodb.net:27017,ac-wbaviyq-shard-00-01.iizgrts.mongodb.net:27017,ac-wbaviyq-shard-00-02.iizgrts.mongodb.net:27017/?ssl=true&replicaSet=atlas-rdmhnb-shard-0&authSource=admin`,
   )
   .then(() => {
-    app.listen(5001);
+    app.listen(process.env.PORT || 5001);
     console.log('Listening on PORT: 5001');
   })
   .catch((err) => {
