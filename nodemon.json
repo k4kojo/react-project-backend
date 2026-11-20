@@ -1,0 +1,8 @@
+{
+  "env": {
+    "DB_USER": "mintahsylvesterkojo_db_user",
+    "DB_PASSWORD": "I26xfAGX1NTdUroo",
+    "GOOGLE_API_KEY": "AIzaSyBNRBXa-G722dv-PMCx8mQTc7uzfRKqCeY",
+    "JWT_KEY": "classified_info"
+  }
+}
